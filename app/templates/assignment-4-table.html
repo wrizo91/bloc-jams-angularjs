@@ -1,0 +1,12 @@
+<table class= "player_bar">
+    <tr class= "control-group main-controls">
+        <td class = "play-pause" ngClick= "clicked = true">
+            
+            //play button in player bar should show if the song is not playing and the play-pause class has not been clicked
+            <a class= "play-button" ng-show = "!playing && !clicked"> <span class="ion-play"></span></a>
+            //pause button in player bar should show if the song is playing (by clicking song number) or if play-pause class is clicked
+            <a class= "pause-button" ng-show = "playing || clicked"> <span class= "ion-pause"></span></a>
+        
+        </td>
+    </tr>
+</table>
