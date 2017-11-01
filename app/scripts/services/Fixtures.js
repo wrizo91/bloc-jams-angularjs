@@ -32,11 +32,22 @@
                  { title: 'Wrong phone number', duration: '2:15' }
                ]
             };   
+            
             Fixtures.getAlbum = function() {
                      return albumPicasso;
-                 };         
-                     return Fixtures;
-                 }
+                 }; 
+            
+            Fixtures.getCollection = function(numOfAlbums){
+                var albumsArr= [];
+                for (var i=0; i < numOfAlbums.length; i++) {
+                    albumsArr.push(angular.copy(albumPicasso));
+                    };
+                return albumsArr;
+                };         
+        
+         return Fixtures;
+
+    }
  
      angular
          .module('blocJams')
